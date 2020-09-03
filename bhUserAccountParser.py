@@ -18,6 +18,6 @@ with open(bhuserfile) as data_file:
 
 
 for i in data['nodes']:
-    if not ('NONHUMAN' or 'ADMIN' or 'TEST') in i['props']['distinguishedname']:
+    if not ('NONHUMAN' or 'TEST') in i['props']['distinguishedname']:
         if i['type'] == 'User':
             print i['label'].rsplit('@')[0]
